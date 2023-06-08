@@ -1,0 +1,45 @@
+@extends('layout')
+
+@section("main_content")
+    <!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <div class="flex-md-column align-items-center">>
+        <h2>Регистрация</h2>
+    </div>
+   
+<form class="flex-md-column align-items-center bg-info p-3 w-50 m-auto shad" method="post" action="registration" style="display: flex; flex-direction: column; gap: 6px; width: 100%;">
+    @csrf
+    <div>
+        <div>Логин</div>
+        <input class="bg-info" type="text" name="name" id="name" placeholder="Ваше имя"/>
+    </div>
+    <div>
+        <div>Почта</div>
+        <input class="bg-info" type="text" name="email" id="email" placeholder="Ваша почта"/>
+    </div>
+    <div>
+        <div>Пароль</div>
+        <input class="bg-info" type="password" name="password" id="password" placeholder="Ваш логин"/>
+    </div>
+
+    <div>
+        <div>Пароль</div>
+        <input class="bg-info" type="password" name="password" id="password" placeholder="Ваш пароль"/>
+    </div>
+    
+   
+    <div>
+    <button type="submit">Отправить</button>
+    </div>
+</form>
+</body>
+</html>
+@endsection
